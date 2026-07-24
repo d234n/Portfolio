@@ -1,0 +1,201 @@
+*{
+    font-family: Arial, sans-serif;
+}
+
+td{
+    padding: 20px;
+}
+
+h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+h3{
+    margin-bottom: 10px;
+}
+
+body{
+    background-color: #E9F5FF;
+    color: #092F64;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    padding: 0px 13px;
+    gap: 25px;
+    color: #092F64;
+
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1000px;
+    z-index: 1000;
+
+    border-radius: 100px;
+    box-shadow: 0 1px 92px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+header h1 {
+  margin: 0;          /* hapus pengganjal tinggi dock dari dalam */
+  font-size: 24px;    /* nyesuai-in ukuran teks supaya pas sama tinggi tombol */
+  line-height: 1;     /* mastiin enggak ada sisa ruang kosong di atas/bawah teks */
+  margin-left: 10px; /* nyesuai-in jarak antara teks sama tombol */
+}
+
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 11px;
+    margin-right: 3px;
+}
+
+a{
+    text-decoration: none;
+    color: #092F64;
+    padding: 8px 16px;
+    transition: 475ms;
+    background-color: #93BFEF;
+    border-radius: 20px;
+    display: inline-block;
+    width: auto;
+    min-width: 75px;
+    text-align: center;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+a:hover{
+    background-color: #326bd6;
+    color: #E9F5FF;
+    border-radius: 10px;
+    transition: 0.1s;
+    box-shadow: 1px 1px 10px #326bd6;
+}
+
+main{
+    padding: 80px;
+    margin-top: 180px;
+    padding-bottom: 300px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #93BFEF;
+    color: #092F64;
+    padding: 20px 0px;
+    border-radius: 20px;
+}
+
+
+/* Hanya berdampak pada halaman baru */
+main.main-about {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  
+  /* HAPUS height: 100vh; agar kotak tidak dipaksa naik ke atas layar */
+  min-height: 80vh; /* Menggunakan min-height agar tinggi kotak fleksibel mengikuti isi */
+  
+  border-radius: 23px;
+  padding: 30px;
+  
+  /* PENGATURAN JARAK AGAR TIDAK NABRAK HEADER */
+  margin: 106px 10px 10px 10px; /* Angka 100px pertama memberikan jarak aman dari atas (header) */
+}
+
+main.main-contact {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  
+  /* HAPUS height: 100vh; agar kotak tidak dipaksa naik ke atas layar */
+  min-height: 80vh; /* Menggunakan min-height agar tinggi kotak fleksibel mengikuti isi */
+  
+  border-radius: 23px;
+  padding: 30px;
+  
+  /* PENGATURAN JARAK AGAR TIDAK NABRAK HEADER */
+  margin: 106px 10px 10px 10px; /* Angka 100px pertama memberikan jarak aman dari atas (header) */
+}
+
+/* Mengatur kotak utama halaman kontak (termasuk solusi jarak dari header) */
+main.main-contact {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-height: 80vh;
+  border-radius: 23px;
+  padding: 40px;
+  margin: 100px 10px 10px 10px; /* Jarak aman agar tidak tertutup dock header */
+  color: #092F64;
+}
+
+/* Merias Teks Informasi Kontak */
+.kontak-info {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.kontak-info a {
+  color: #93BFEF;
+  text-decoration: underline;
+  padding: 0; /* Merreset padding agar tidak ikut style navbar */
+  background: none;
+}
+
+/* Struktur Formulir */
+.kontak-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px; /* Membatasi lebar form agar tidak terlalu melar */
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+/* Merias Input & Textarea */
+.form-group input, 
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* Merias Tombol Kirim */
+.btn-kirim {
+  background-color: #092F64;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-kirim:hover {
+  background-color: #93BFEF;
+  color: #092F64;
+}
